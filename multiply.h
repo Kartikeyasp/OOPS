@@ -1,7 +1,7 @@
 #ifndef multiply_H
 #define multiply_H
 #include "pred.h"
-#include "sum.h"
+#include "add.h"
 
 //Objective: Multiply two non negative integers
 //Inputs: Two non negative integers x(size_t) and y(size_t)
@@ -19,7 +19,7 @@ size_t multiply(size_t x, size_t y)
         return 0;
     }
 
-    return sum(x, multiply(x, pred(y)));
+    return add(x, multiply(x, pred(y)));
 }
 
 #endif
